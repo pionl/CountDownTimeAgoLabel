@@ -69,6 +69,9 @@ public class CountDown {
     /// The logic for the countdown
     public var logic: CountDownLogic = .CountDown
     
+    /// Indicates if the countdown has finished
+    private(set) public var hasFinished: Bool = false
+    
     /// The finished message on countdown logic
     public var finishedMessage: String = NSLocalizedString("countdown_finished", bundle: CountDownBundle.resourceBundle(), comment: "")
     
@@ -99,6 +102,8 @@ public class CountDown {
      */
     public func start() {
         if isFullyPrepared() {
+            
+            hasFinished = false
             
             // enable automatic timer for the countdown
             if logic != .Static {
@@ -165,6 +170,9 @@ public class CountDown {
                 // stop the timer and update the delegate
                 stop()
                 delegate?.countDownFinished(self)
+                
+                // the countdown has finished
+                hasFinished = true
                 
                 // formates the finished date
                 return formatFinishedState()

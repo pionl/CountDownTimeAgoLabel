@@ -119,6 +119,7 @@ You can access the labels CountDown object via `label.countDown`.
 * delegate *to respond on changes*
 * logic *to decide which timer logic to use*
 * finishedMessage *to customize the finish text*
+* hasFinished
 
 **You can call:**
 
@@ -133,6 +134,7 @@ You can access the labels CountDown object via `label.countDown`.
 
 * date *to set the starting date and trigger start*
 * onFinishBlock *to handle the finish of the countdown*
+* prefixText and suffixText to add custom text format, must add a space if desired
 
 **You can call:**
 

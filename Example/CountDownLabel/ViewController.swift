@@ -20,19 +20,24 @@ class ViewController: UIViewController, CountDownProtocol {
     @IBOutlet weak var customLabel3: CountDownLabel!
     @IBOutlet weak var customLabel2: CountDownLabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         let countDown = CountDown(aDelegate: self)
         //countDown.logic = .Automatic
-        countDown.start = NSDate(timeIntervalSinceNow: 20)
+        countDown.date = NSDate(timeIntervalSinceNow: 20)
         
-        let formatter = countDown.formatter as? CountDownBaseFormater
+        let formatter = countDown.formatter as? CountDownBaseFormatter
         formatter?.dateStyle = .Full // this value is default
         formatter?.timeStyle = .Full // this value is default
         
-        customLabel.date = NSDate(timeIntervalSinceNow: 100000)
+        customLabel.prefixText = "Timer: "
+        customLabel.showPrefixOnFinish = true
+        customLabel.suffixText = " Code suffix"
+        
+        customLabel.date = NSDate(timeIntervalSinceNow: 70)
         customLabel2.date = NSDate(timeIntervalSinceNow: 1000000)
         customLabel4.date = NSDate(timeIntervalSinceNow: 1000000)
         customLabel3.date = NSDate(timeIntervalSinceNow: -100000)

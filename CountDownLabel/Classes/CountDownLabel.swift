@@ -76,7 +76,19 @@ public class CountDownLabel: UILabel, CountDownProtocol {
     /// Triggered when logic is set on CountDown (default) and the countdown has finished
     public var onFinishBlock: CountDownFinishBlock? = nil
     
-    // MARK: INIT
+    /// Add a text before the desired format. Must add a space if desired
+    @IBInspectable public var prefixText: String?
+    
+    /// Add a text after the format. Must add a space if desired
+    @IBInspectable public var suffixText: String?
+    
+    /// Show the prefix on finished state
+    @IBInspectable public var showPrefixOnFinish: Bool = false
+    
+    /// Show the suffix on finished state
+    @IBInspectable public var showSuffixOnFinish: Bool = false
+    
+    // MARK: - INIT
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -89,6 +101,18 @@ public class CountDownLabel: UILabel, CountDownProtocol {
         
         setup()
     }
+    
+    // MARK: - Deinit
+    
+    deinit {
+        countDown?.stop()
+    }
+    
+    public override func removeFromSuperview() {
+        super.removeFromSuperview()
+        countDown?.stop()
+    }
+    
     
     /**
      Setups the basic countdown
@@ -106,7 +130,30 @@ public class CountDownLabel: UILabel, CountDownProtocol {
      - parameter format:
      */
     public func countDownChanged(countDown: CountDown, format: String) {
-        text = format
+        var finalText = ""
+        
+        appendTextIfCan(&finalText, countDown: countDown, canShowOnFinished: showPrefixOnFinish, text: prefixText)
+        
+        finalText += format
+        
+        appendTextIfCan(&finalText, countDown: countDown, canShowOnFinished: showSuffixOnFinish, text: suffixText)
+        
+        text = finalText
+    }
+    
+    /**
+     Checks if we cann add suffix/prefix text into the final text
+     
+     - parameter target:
+     - parameter countDown:
+     - parameter text:
+     */
+    private func appendTextIfCan(inout target: String, countDown: CountDown, canShowOnFinished: Bool, text: String?) {
+        // add only if text is provided and if the countdown is not in finish state (if the
+        // not set differently)
+        if text != nil && (!countDown.hasFinished || canShowOnFinished) {
+            target += text!
+        }
     }
     
     /**
