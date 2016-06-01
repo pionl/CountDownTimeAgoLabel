@@ -1,0 +1,16 @@
+PODS:
+  - CountDownLabel (0.1.0)
+
+DEPENDENCIES:
+  - CountDownLabel (from `../`)
+
+EXTERNAL SOURCES:
+  CountDownLabel:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CountDownLabel: 9ce908674487cc1bd7239c8c9594d15b233d41a7
+
+PODFILE CHECKSUM: 0e070a418d827880c0d7196de844f0840fcbb887
+
+COCOAPODS: 1.0.0

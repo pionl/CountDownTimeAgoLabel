@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="CountDownLabel_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +17,97 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Own usage" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNa-k4-lNx">
+                                <rect key="frame" x="30" y="30" width="540" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFJ-H9-y4d" customClass="CountDownLabel" customModule="CountDownLabel">
+                                <rect key="frame" x="30" y="67" width="540" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="dateStyle" value="Short"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fG-p2-EDU" customClass="CountDownLabel" customModule="CountDownLabel">
+                                <rect key="frame" x="30" y="104" width="540" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="dateStyle" value="Short"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="timeStyle" value="Short"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLR-pa-1bf" customClass="CountDownLabel" customModule="CountDownLabel">
+                                <rect key="frame" x="30" y="144" width="540" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="timeStyle" value="none"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="logic" value="Automatic"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mT1-Uj-Sd1" customClass="CountDownLabel" customModule="CountDownLabel">
+                                <rect key="frame" x="30" y="179" width="540" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="timeStyle" value="ISO"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrl-h9-BkF" customClass="CountDownLabel" customModule="CountDownLabel">
+                                <rect key="frame" x="30" y="212" width="540" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="timeStyle" value="Short"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="logic" value="Static"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="dateStyle" value="Short"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="mT1-Uj-Sd1" secondAttribute="trailing" constant="10" id="2aE-CB-Fdn"/>
+                            <constraint firstItem="UNa-k4-lNx" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="49k-Lr-gmf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hLR-pa-1bf" secondAttribute="trailing" constant="10" id="4Qu-jZ-Qkq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vrl-h9-BkF" secondAttribute="trailing" constant="10" id="83u-yX-c6G"/>
+                            <constraint firstItem="UFJ-H9-y4d" firstAttribute="top" secondItem="UNa-k4-lNx" secondAttribute="bottom" constant="16" id="8l4-g7-28a"/>
+                            <constraint firstItem="mT1-Uj-Sd1" firstAttribute="top" secondItem="hLR-pa-1bf" secondAttribute="bottom" constant="14" id="B4F-T8-C1i"/>
+                            <constraint firstItem="UFJ-H9-y4d" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="CL9-Dk-pjT"/>
+                            <constraint firstItem="1fG-p2-EDU" firstAttribute="top" secondItem="UFJ-H9-y4d" secondAttribute="bottom" constant="16" id="DLP-XQ-PAV"/>
+                            <constraint firstItem="hLR-pa-1bf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="KNr-Ji-Fpe"/>
+                            <constraint firstItem="vrl-h9-BkF" firstAttribute="top" secondItem="mT1-Uj-Sd1" secondAttribute="bottom" constant="12" id="NtC-NW-hkP"/>
+                            <constraint firstItem="1fG-p2-EDU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="WDu-4k-Osz"/>
+                            <constraint firstItem="hLR-pa-1bf" firstAttribute="top" secondItem="1fG-p2-EDU" secondAttribute="bottom" constant="19" id="aab-7E-3sC"/>
+                            <constraint firstItem="mT1-Uj-Sd1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="kWb-GE-Bfs"/>
+                            <constraint firstItem="UNa-k4-lNx" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="10" id="md3-GG-2u6"/>
+                            <constraint firstItem="vrl-h9-BkF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="qME-ip-pJj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UNa-k4-lNx" secondAttribute="trailing" constant="10" id="tgb-OB-3gB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UFJ-H9-y4d" secondAttribute="trailing" constant="10" id="xz1-EH-eil"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1fG-p2-EDU" secondAttribute="trailing" constant="10" id="ySj-CX-Axz"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="customLabel" destination="UFJ-H9-y4d" id="qBx-5d-NTQ"/>
+                        <outlet property="customLabel2" destination="1fG-p2-EDU" id="3Yu-hO-taY"/>
+                        <outlet property="customLabel3" destination="hLR-pa-1bf" id="xqd-kV-uSW"/>
+                        <outlet property="customLabel4" destination="mT1-Uj-Sd1" id="mMn-nY-QPM"/>
+                        <outlet property="customLabel5" destination="vrl-h9-BkF" id="eil-pM-DJ5"/>
+                        <outlet property="testLabel" destination="UNa-k4-lNx" id="Gj6-Xq-Tsw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="375" y="610"/>
         </scene>
     </scenes>
 </document>

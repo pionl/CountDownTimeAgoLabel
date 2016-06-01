@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  CountDownLabel
+
+  Created by Martin Kluska on 30.05.16.
+  Copyright © 2016 iMakers, s.r.o. All rights reserved.
+*/
+
+"countdown_finished" = "ukončeno";

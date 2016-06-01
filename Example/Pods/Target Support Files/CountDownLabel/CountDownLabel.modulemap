@@ -1,0 +1,6 @@
+framework module CountDownLabel {
+  umbrella header "CountDownLabel-umbrella.h"
+
+  export *
+  module * { export * }
+}
