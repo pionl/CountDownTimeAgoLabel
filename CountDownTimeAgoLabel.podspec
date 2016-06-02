@@ -26,4 +26,3 @@ Supports multiple styles for formatting with ability to set custom formatter. Su
   }
 
 end
- 
