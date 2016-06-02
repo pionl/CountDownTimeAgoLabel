@@ -1,8 +1,8 @@
 # CountDownLabel
 
-[![Version](https://img.shields.io/cocoapods/v/CountDownLabel.svg?style=flat)](http://cocoapods.org/pods/CountDownLabel)
-[![License](https://img.shields.io/cocoapods/l/CountDownLabel.svg?style=flat)](http://cocoapods.org/pods/CountDownLabel)
-[![Platform](https://img.shields.io/cocoapods/p/CountDownLabel.svg?style=flat)](http://cocoapods.org/pods/CountDownLabel)
+[![Version](https://img.shields.io/cocoapods/v/CountDownTimeAgoLabel.svg?style=flat)](http://cocoapods.org/pods/CountDownTimeAgoLabel)
+[![License](https://img.shields.io/cocoapods/l/CountDownTimeAgoLabel.svg?style=flat)](http://cocoapods.org/pods/CountDownTimeAgoLabel)
+[![Platform](https://img.shields.io/cocoapods/p/CountDownTimeAgoLabel.svg?style=flat)](http://cocoapods.org/pods/CountDownTimeAgoLabel)
 
 ## Example
 
@@ -30,6 +30,10 @@ Martin Kluska, martin.kluska@imakers.cz
 CountDownLabel is available under the MIT license. See the LICENSE file for more info.
 
 ## Usage
+
+Import the module
+
+    import CountDownTimeAgoLabel
 
 When the date is set to label/countdown objects, the timer will start (if the formatter is set). You can create `CountDown` object for a custom UI or you can create a `CountDownLabel` with automatic text updating
 
