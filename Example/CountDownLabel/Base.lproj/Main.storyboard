@@ -73,6 +73,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="timeStyle" value="Short"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="logic" value="Static"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="dateStyle" value="Short"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="dateAndTimeSeparator" value=" and "/>
                                 </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>

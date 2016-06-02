@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'CountDownTimeAgoLabel'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'CountDown logic via custom label. You can use use own view implementation via CountDown class usage'
 
   s.description      = <<-DESC
@@ -26,3 +26,4 @@ Supports multiple styles for formatting with ability to set custom formatter. Su
   }
 
 end
+ 

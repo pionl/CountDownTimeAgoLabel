@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Enables loading the count down bundle
 class CountDownBundle: NSObject {
     
     /// Returns the shared bundle
@@ -29,7 +30,23 @@ class CountDownBundle: NSObject {
         resourcesBundle = NSBundle(path: path!)!
     }
     
+    /**
+     Returns the resources bundle
+     
+     - returns:
+     */
     static func resourceBundle() -> NSBundle {
         return shared.resourcesBundle!
+    }
+    
+    /**
+     Returns the localized string from the bundle
+     
+     - parameter key:
+     
+     - returns:
+     */
+    static func localizedString(key: String) -> String {
+        return NSLocalizedString(key, bundle: CountDownBundle.resourceBundle(), comment: "")
     }
 }

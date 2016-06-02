@@ -20,6 +20,11 @@ class CountDownISOTimeStyle: CountDownStyleProtocol {
         
         // ensure the correct time separator
         formatter.timeSeparator = ":"
+        
+        // if we have a full style, we will add a 'and' separator
+        if formatter.dateStyle == .Full {
+            formatter.dateTimeSeparator = CountDownBundle.localizedString("date_time_separator_full_to_iso")
+        }
     }
     
     /**

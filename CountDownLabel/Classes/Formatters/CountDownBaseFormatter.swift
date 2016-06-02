@@ -8,6 +8,16 @@
 
 import Foundation
 
+/**
+ The countdown components
+ 
+ - Year:
+ - Month:
+ - Day:
+ - Hour:
+ - Minute:
+ - Second: 
+ */
 public enum CountDownFormatComponent: String {
     case Year = "countdown_year"
     case Month = "countdown_month"
@@ -38,7 +48,7 @@ public enum CountDownFormatStyle: String {
 
 public class CountDownBaseFormatter : NSObject, CountDownFormatProtocol {
     
-    /// Separator used to join the date and time together
+    /// Separator used to join the date and time together. Default is space
     public var dateTimeSeparator = " "
     
     // MARK: - Time

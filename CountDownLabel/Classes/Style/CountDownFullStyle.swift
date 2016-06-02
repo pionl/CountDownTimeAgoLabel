@@ -44,7 +44,7 @@ class CountDownFullStyle: CountDownStyleProtocol {
         let key = localizedKeyFor(component)
         
         // must include the stringdict
-        let format = NSLocalizedString(key, bundle: CountDownBundle.resourceBundle(), comment: "")
+        let format = CountDownBundle.localizedString(key)
         
         // format the localized string with given value
         return String.localizedStringWithFormat(format, value)

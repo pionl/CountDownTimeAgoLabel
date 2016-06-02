@@ -73,7 +73,7 @@ public class CountDown {
     private(set) public var hasFinished: Bool = false
     
     /// The finished message on countdown logic
-    public var finishedMessage: String = NSLocalizedString("countdown_finished", bundle: CountDownBundle.resourceBundle(), comment: "")
+    public var finishedMessage: String = CountDownBundle.localizedString("countdown_finished")
     
     // MARK: INIT
     

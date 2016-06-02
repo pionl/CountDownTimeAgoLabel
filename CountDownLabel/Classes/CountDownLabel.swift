@@ -63,6 +63,17 @@ public class CountDownLabel: UILabel, CountDownProtocol {
         }
     }
     
+    /// Enable custom date and time separator, you must provide spaces
+    @IBInspectable var dateAndTimeSeparator: String? {
+        didSet {
+            if dateAndTimeSeparator != nil {
+                if let formatter = countDown?.formatter as? CountDownBaseFormatter {
+                    formatter.dateTimeSeparator = dateAndTimeSeparator!
+                }
+            }
+        }
+    }
+    
     /// Countdown date, in default will trigger the start of the countdown
     public var date: NSDate? {
         set(value) {

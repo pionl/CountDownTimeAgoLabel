@@ -7,3 +7,4 @@
 */
 
 "countdown_finished" = "finished";
+"date_time_separator_full_to_iso" = " and ";
